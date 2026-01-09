@@ -1,5 +1,5 @@
 ## Summary
-Added companies:
+Added company:
 - 
 
 ## Checklist
