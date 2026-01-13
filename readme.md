@@ -1,13 +1,13 @@
 # awesome-greek-tech-jobs
-This a comprehensive map of companies that hire for tech jobs in Greece. It highlights their focus sectors, careers pages, and LinkedIn profiles, while explicitly including details on **work policies** (Remote, Hybrid, On-site) and **office locations**. This repository is designed to help professionals explore opportunities and connect with organizations across the Greek tech ecosystem. 
+This a comprehensive map of companies that hire for tech jobs in Greece. It highlights their focus sectors, careers pages, and LinkedIn profiles, while explicitly including details on work policies (Remote, Hybrid, On-site) and office locations. This repository is designed to help professionals explore opportunities and connect with organizations across the Greek tech ecosystem. 
 
 
-[**🌐 View the Live Directory**](https://leftkats.github.io/awesome-greek-tech-jobs/) 
+[**✨ Explore the Live Directory**](https://leftkats.github.io/awesome-greek-tech-jobs/) curated with ❤️ for the community. 
 
 ---
 
 ## Engineering Hubs & Career Portals
-> A directory of *108* tech companies in Greece with direct links to their jobs and LinkedIn presence.
+> A community-driven hub featuring **108** unique tech teams. With **70** offices in **Athens**.
 
 | # | Company Name | Sectors | Careers | LinkedIn |
 | :--- | :--- | :--- | :--- | :--- |
@@ -137,3 +137,15 @@ This a comprehensive map of companies that hire for tech jobs in Greece. It high
 ### Contributors
 
 A huge thanks to the community for helping improve this project to grow!!
+
+---
+### Disclaimer & Mission 
+
+This project is a **community-driven initiative** aimed at providing a centralized resource for tech job seekers interested in the Greek market. 
+
+ **Please note:**
+ * **Non-Affiliation:** This project is independent and is not affiliated with, sponsored by, or endorsed by any of the companies listed. All company names and website links are the property of their respective owners.
+ * **Accuracy:** Information is gathered from public sources like LinkedIn and corporate career pages. While I strive for accuracy, company policies change frequently. Always verify details on the official company website.
+ * **Contributions:** If you notice any inaccuracies or have suggestions for additions, please feel free to contribute via pull requests.
+ * **Liability:** As per the [MIT License](LICENSE), this information is provided as is without warranty of any kind.
+
