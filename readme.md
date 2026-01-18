@@ -166,6 +166,8 @@ This a comprehensive map of companies that hire for tech jobs in Greece. It high
 
 ---
 ### Contributors
+[![Contributors](https://contrib.rocks/image?repo=leftkats/awesome-greek-tech-jobs)](https://github.com/leftkats/awesome-greek-tech-jobs/graphs/contributors)
+
 
 A huge thanks to the community for helping improve this project to grow!!
 
