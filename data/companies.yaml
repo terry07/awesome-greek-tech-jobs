@@ -50,6 +50,18 @@
   locations:
     - Athens
   work_policy: hybrid
+- name: DataScouting
+  url: https://datascouting.com/
+  sectors:
+    - Media Intelligence
+    - Information Technology
+    - Software Development
+    - Digital Libraries
+  careers_url: https://datascouting.com/careers/
+  linkedin_company_id: datascouting
+  locations:
+    - Thessaloniki
+  work_policy: hybrid
 - name: D-one
   url: https://d-one.gr/
   sectors:
@@ -207,6 +219,24 @@
   locations:
     - Athens
   work_policy: remote # hybrid
+- name: Marpoint
+  url: https://marpoint.gr/
+  sectors:
+  - Software Development
+  - IT Services
+  - AI
+  - Data
+  - Maritime
+  - Telecommunications
+  - 5G
+  - Network Infrastructure
+  - Networks
+  - IoT
+  careers_url: https://marpoint.gr/jobs/
+  linkedin_company_id: marpoint-ltd
+  locations:
+    - Athens
+  work_policy: hybrid
 - name: Mytilineos
   url: https://www.metlengroup.com/
   sectors:
@@ -350,6 +380,18 @@
   locations:
     - Athens
   work_policy: hybrid
+- name: Siemens
+  url: https://www.siemens.com/
+  sectors:
+    - Industrial Automation
+    - Energy
+    - Healthcare
+    - Infrastructure
+  careers_url: https://jobs.siemens.com/en_US/externaljobs
+  linkedin_company_id: siemens
+  locations:
+    - Athens
+  work_policy: remote
 - name: Signal Group
   url: https://www.thesignalgroup.com/
   sectors:
@@ -717,6 +759,7 @@
     - Automation
   careers_url: https://careers.elyos.ai/
   linkedin_company_id: elyosai
+  work_policy: on-site
 - name: Evenly
   url: https://evenly.care/
   sectors:
@@ -817,3 +860,525 @@
     - Technology
   careers_url: https://www.bestprice.gr/careers
   linkedin_company_id: bestprice-gr
+- name: Delian Alliance Industries
+  url: https://delian.ai/
+  sectors:
+    - Defense
+    - Space Manufacturingw
+    - AI
+  careers_url: https://delian.ai/careers
+  linkedin_company_id: delian-ai
+  locations:
+    - Athens
+  work_policy: hybrid
+- name: SMPnet
+  url: https://www.smpnet.tech/
+  sectors:
+    - Software Development
+  careers_url: https://www.smpnet.tech/careers
+  linkedin_company_id: smpnet
+  locations:
+    - Athens
+  work_policy: hybrid
+- name: THEON INTERNATIONAL
+  url: https://theon.com/
+  sectors:
+    - Advance Optronics
+    - Thermal Imaging
+    - Night Vision
+  careers_url: https://theon.com/career/job-opportunities/
+  linkedin_company_id: theon-international
+  locations:
+    - Athens
+  work_policy: on-site
+- name: Kenotom
+  url: https://www.kenotom.com/
+  sectors:
+    - Embedded Systems
+    - Industrial Automation
+  careers_url: https://www.kenotom.com/career/
+  linkedin_company_id: kenotom
+  locations:
+    - Thessaloniki
+  work_policy: hybrid
+- name: Progressive Robotics
+  url: https://progressiverobotics.ai/
+  sectors:
+    - Robotics
+    - AI
+  careers_url: https://progressiverobotics.ai/careers/
+  linkedin_company_id: progressive-robotics-ai
+  locations:
+    - Thessaloniki
+  work_policy: on-site
+- name: OPAP
+  url: https://www.opap.gr/
+  sectors:
+    - Betting
+  careers_url: https://corporate.opap.gr/etairia/eukairies-karieras
+  linkedin_company_id: opap-s.a.
+  locations:
+    - Athens
+  work_policy: hybrid
+- name: Kivon
+  url: https://www.kivon.gr/
+  sectors:
+    - iGaming
+    - Recruitment
+    - HR Tech
+  careers_url: https://www.kivon.gr/jobs/
+  linkedin_company_id: kivon
+  locations:
+    - Athens
+- name: Welcome Pickups
+  url: https://www.welcomepickups.com/
+  sectors:
+    - Travel
+    - Transportation
+    - Hospitality
+    - Travel Tech
+  careers_url: https://apply.workable.com/welcome/
+  linkedin_company_id: welcomepickups
+  locations:
+    - Athens
+  work_policy: hybrid
+- name: Pfizer
+  url: https://www.pfizer.com/
+  sectors:
+    - Pharmaceuticals
+  careers_url: https://www.pfizer.com/about/careers
+  linkedin_company_id: pfizer
+  locations:
+    - Thessaloniki
+  work_policy: hybrid
+- name: Chubb
+  url: https://www.chubb.com/us-en
+  sectors:
+    - Insurance
+  careers_url: https://fa-ewgu-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001
+  linkedin_company_id: chubb
+  locations:
+    - Thessaloniki
+  work_policy: hybrid
+- name: Athens Technology Center
+  url: https://www.atc.gr/
+  sectors:
+    - Consulting
+    - Software Development
+    - IT Services
+  careers_url: https://apply.workable.com/athens-technology-center-1/
+  linkedin_company_id: athens-technology-center
+  locations:
+    - Athens
+    - Thessaloniki
+  work_policy: hybrid
+- name: Amdocs
+  url: https://www.amdocs.com/about
+  sectors:
+    - Software Development
+    - Telecommunications
+    - 5G
+  careers_url: https://www.amdocs.com/careers/home
+  linkedin_company_id: amdocs
+  locations:
+    - Athens
+  work_policy: hybrid
+
+- name: Validata Group
+  url: https://www.validata-software.com/
+  sectors:
+    - Fintech
+    - AI
+    - Banktech
+  careers_url: https://www.validata-software.com/company/career/
+  linkedin_company_id: validata-group
+  locations:
+    - Athens
+  work_policy: hybrid
+- name: DuckDuckGo
+  url: https://duckduckgo.com/
+  sectors:
+    - Search Engine
+    - Privacy Tech
+    - Internet Services
+  careers_url: https://duckduckgo.com/hiring
+  linkedin_company_id: duck-duck-go
+  work_policy: remote
+- name: SPACE HELLAS S.A.
+  url: https://www.space.gr/en
+  sectors:
+    - Consulting
+    - IT Services
+    - Systems Integration
+  careers_url: https://www.space.gr/en/career
+  linkedin_company_id: pace-hellas-s.a.
+  locations:
+    - Athens
+- name: RSight
+  url: https://www.rsight.com/
+  sectors:
+    - Staffing
+    - Recruitment
+  careers_url: https://www.rsight.com/find-a-job
+  linkedin_company_id: rsight
+  locations:
+    - Athens
+  work_policy: hybrid # remote
+- name: NRB
+  url: https://www.nrb.be/fr
+  sectors:
+    - Consulting
+    - IT Services
+  careers_url: https://nrbcareers.com/
+  linkedin_company_id: nrb
+  locations:
+    - Athens
+  work_policy: on-site
+- name: Signify Technology
+  url: https://www.signifytechnology.com/
+  sectors:
+    - Staffing
+    - Recruitment
+  careers_url: https://www.signifytechnology.com/join-us/
+  linkedin_company_id: signify-technology
+  locations:
+    - Athens
+    - Patras
+  work_policy: hybrid
+- name: Sword Group
+  url: https://www.sword-group.com/
+  sectors:
+    - Consulting
+    - IT Services
+  careers_url: https://www.sword-group.com/careers/
+  linkedin_company_id: sword-group
+  locations:
+    - Athens
+  work_policy: hybrid
+
+- name: Cloud Office
+  url: https://www.cloud-office.com/gr
+  sectors:
+    - Cloud Services
+    - IT Services
+  linkedin_company_id: cloud-office
+  locations:
+    - Athens
+  work_policy: hybrid
+- name: WorkEthix
+  url: https://workethixrec.com/
+  sectors:
+    - Recruitment
+    - IT Services
+    - Consulting
+  careers_url: https://workethixrec.com/jobs
+  linkedin_company_id: workethix
+  locations:
+    - Athens
+  work_policy: hybrid
+- name: Synelixis Solutions SA
+  url: https://synelixis.com/
+  sectors:
+    - Telecommunications
+    - Networking
+    - Sensory
+    - Automation
+  careers_url: https://synelixis.com/career/
+  linkedin_company_id: synelixis-solutions-ltd
+  locations:
+    - Athens
+  work_policy: hybrid
+- name: UpcoMinds
+  url: https://upcominds.com/
+  sectors:
+    - Consulting
+    - IT Services
+  careers_url: https://upcominds.com/career/
+  linkedin_company_id: upcominds
+  locations:
+    - Athens
+  work_policy: hybrid
+- name: Aisera
+  url: https://aisera.com/
+  sectors:
+    - AI
+    - Software Development
+  careers_url: https://job-boards.greenhouse.io/aiserajobs
+  linkedin_company_id: aisera
+  locations:
+    - Athens
+    - Bangalore
+    - Hyderabad
+    - Santa Clara, CA
+  work_policy: remote
+- name: Cyber Emphasis
+  url: https://cyberemphasis.com/en/
+  sectors:
+    - IT Services
+    - Consulting
+  careers_url: https://apply.workable.com/cyber-emphasis/
+  linkedin_company_id: cyberemphasis
+  locations:
+    - Athens
+  work_policy: hybrid
+- name: Optasia
+  url: https://optasia.com/work-with-us/?location=Greece
+  sectors:
+    - Fintech
+  careers_url: https://apply.workable.com/optasia/
+  linkedin_company_id: optasiaplatform
+  locations:
+    - Athens
+  work_policy: hybrid
+- name: Epignosis learning technologies
+  url: http://epignosishq.com/
+  sectors:
+    - Learning
+    - eLearning
+    - Software Development
+    - HR tech
+  careers_url: https://apply.workable.com/epignosis/
+  linkedin_company_id: epignosis-ltd
+  locations:
+    - Athens
+  work_policy: hybrid
+- name: Hemmersbach
+  url: https://www.hemmersbach.com/
+  sectors:
+    - IT Services
+  careers_url: https://www.hemmersbach.com/en/career/open-jobs
+  linkedin_company_id: hemmersbach
+  locations:
+    - Athens
+  work_policy: hybrid
+- name: Techbridge Global
+  url: https://techbridgeglobal.io/
+  sectors:
+    - Technology
+    - Information
+    - Internet
+    - Employment Solutions
+  careers_url: https://techbridge.org/careers/
+  linkedin_company_id: techbridgeltd
+  work_policy: remote
+- name: wherewework Hellas
+  url: https://www.wherewework.gr/el
+  sectors:
+    - Human Resources
+  linkedin_company_id: wherewework-gr
+  locations:
+    - Thessalonig
+    - Patras
+    - Piraues
+    - Larisa
+    - Iraklion
+  work_policy: on-site
+- name: Sticker Mule
+  url: https://www.stickermule.com/
+  sectors:
+    - Printing Services
+  careers_url: https://www.stickermule.com/careers
+  linkedin_company_id: sticker-mule
+  work_policy: remote
+- name: Agile Actors
+  url: http://www.agileactors.com/
+  sectors:
+    - IT Services
+    - Consulating
+  careers_url: https://www.agileactors.com/careers
+  locations:
+    - Athens
+  linkedin_company_id: agile-actors
+- name: Toptal
+  url: https://www.toptal.com/
+  sectors:
+    - Freelance Platforms
+  careers_url: https://www.toptal.com/careers
+  linkedin_company_id: toptal
+  work_policy: remote
+- name: ATCOM
+  url: https://www.atcom.gr/
+  sectors:
+    - Technology, Information and Internet
+  locations:
+    - Athens
+  careers_url: https://careers.atcom.gr/
+  linkedin_company_id: atcom-sa
+  work_policy: hybrid
+- name: SKY express
+  url: https://www.skyexpress.gr/el
+  sectors:
+    - Airlines
+    - Aviation
+  careers_url: https://www.skyexpress.gr/en/company/careers
+  locations:
+    - Athens
+    - Crete
+  linkedin_company_id: sky-express-airlines
+- name: Neurocom SA
+  url: https://www.neurocom.gr/
+  sectors:
+    - IT Services
+    - Consulting
+  careers_url: https://www.neurocom.gr/career/
+  locations:
+    - Athens
+  linkedin_company_id: neurocom-sa
+  work_policy: remote
+- name: More.com
+  url: https://www.more.com
+  sectors:
+    - Marketplace
+    - Internet Platform
+  careers_url: https://apply.workable.com/more-com/
+  locations:
+    - Athens
+  linkedin_company_id: moredotcom
+  work_policy: on-site
+- name: tgndata
+  url: https://tgndata.com/
+  sectors:
+    - Technology
+    - Price Intelligence
+  careers_url: https://apply.workable.com/tgndata
+  locations:
+    - Athens
+  linkedin_company_id: tgndata
+  work_policy: hybrid
+- name: Cisco
+  url: https://www.cisco.com/
+  sectors:
+    - Networks
+    - Telecommunications
+    - Network Infrastructure
+  careers_url: https://careers.cisco.com/global/en/search-results
+  locations:
+    - Athens
+  linkedin_company_id: cisco
+- name: Block Labs
+  url: https://careers.blocklabs.io/
+  sectors:
+    - Technology
+    - Information and Internet
+    - Web3
+  careers_url: https://careers.blocklabs.io/
+  locations:
+    - Athens
+  linkedin_company_id: block-labs-web3
+  work_policy: remote
+- name: team.blue
+  url: https://team.blue/
+  sectors:
+    - Software Development
+  careers_url: https://team.blue/careers/
+  locations:
+    - Crete
+  linkedin_company_id: teamblue
+  work_policy: remote
+- name: Code.Hub
+  url: https://www.codehub.gr/
+  sectors:
+    - IT Services
+    - Consulting
+  careers_url: https://codehub.gr/career/
+  locations:
+    - Athens
+  linkedin_company_id: code.Hub
+  work_policy: on-site # remote, hybrid
+- name: Pricefox.gr
+  url: https://www.codehub.gr/
+  sectors:
+    - Insurtech
+  careers_url: https://www.pricefox.gr/
+  locations:
+    - Athens
+  linkedin_company_id: pricefoxgr
+  work_policy: hybrid
+- name: Firstsource
+  url: https://www.firstsource.com/
+  sectors:
+    - Outsourcing
+    - Consulting
+  careers_url: https://careers.firstsource.com/
+  linkedin_company_id: firstsource-solutions-limited
+  work_policy: remote
+- name: IKNOWHOW SA
+  url: http://www.iknowhow.com/
+  sectors:
+    - Software Engineering
+    - Digital Business Automation
+    - Digital Health
+    - Industrial Automation
+  careers_url: https://www.iknowhow.com/talent/
+  locations:
+    - Athens
+  linkedin_company_id: iknowhow-s.a.
+  work_policy: hybrid
+- name: Intrum
+  url: http://www.intrum.com/
+  sectors:
+    - Financial Services
+    - Ethical Debt Resolution
+    - Credit Management Services
+  careers_url: https://intrum.wd3.myworkdayjobs.com/en-US/External
+  locations:
+    - Athens
+  linkedin_company_id: intrum
+  work_policy: hybrid
+- name: FINARTIX Fintech Solutions S.A.
+  url: http://www.finartix.com/
+  sectors:
+    - Fintech
+    - IT Services
+    - Consulting
+  careers_url: https://apply.workable.com/finartix/
+  locations:
+    - Athens
+  linkedin_company_id: finartix
+  work_policy: hybrid
+- name: Express Publishing
+  url: http://www.expresspublishing.co.uk/
+  sectors:
+    - Book
+    - Periodical Publishing
+  careers_url: https://www.expresspublishing.co.uk/en/careers
+  locations:
+    - Athens
+  linkedin_company_id: express-publishing
+  work_policy: on-site
+- name: Mobito
+  url: https://www.mobito.io/
+  sectors:
+    - Mobility
+    - Geospatial Intelligence
+  locations:
+    - Athens
+  linkedin_company_id: mobito-io
+  work_policy: hybrid
+- name: emendSys
+  url: https://www.emendsys.com/
+  sectors:
+    - IT Services
+    - Software Development
+  locations:
+    - Athens
+  linkedin_company_id: emendsys
+  work_policy: hybrid
+- name: Logstail
+  url: https://logstail.com/
+  sectors:
+    - Cybersecutiry
+  careers_url: https://logstail.com/blog/jobs/
+  locations:
+    - Athens
+  linkedin_company_id: logstail
+  work_policy: on-site
+- name: Fractual
+  url: https://fractual.com/
+  sectors:
+    - Financial Services
+    - Investment
+  locations:
+    - Athens
+  linkedin_company_id: fractualcom
+  work_policy: on-site
