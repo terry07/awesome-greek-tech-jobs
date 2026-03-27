@@ -1,10 +1,8 @@
-"""Fetch open-job counts from Workable (server-side; avoids browser CORS).
+"""Fetch open-job counts from Workable using /count endpoints only.
 
-Uses ``POST /api/v1/accounts/{slug}/jobs`` to list all jobs, then counts those
-whose ``location.country == "Greece"``.  This is IP-independent (unlike the
-``/count`` endpoint whose ``incountry`` field is based on requester geolocation).
-
-Writes ``data/workable_counts.yaml`` (Greece count per apply.workable slug).
+Tries a small set of ``/count`` URL variants per slug and uses the first
+usable response. If all variants fail, stores ``0`` for that slug so the whole
+list is always completed in one run.
 """
 
 from __future__ import annotations
@@ -25,13 +23,15 @@ OUTPUT_PATH = Path("data/workable_counts.yaml")
 
 DELAY_BETWEEN_SLUGS_SEC = 1.25
 TIMEOUT_SEC = (12, 30)
-TARGET_COUNTRY = "Greece"
-
 _RETRY_TOTAL = 5
 _RETRY_BACKOFF_FACTOR = 1.5
 _RETRY_STATUS_FORCELIST = (429, 500, 502, 503, 504)
 
-_JOBS_URL = "https://apply.workable.com/api/v1/accounts/{slug}/jobs"
+_COUNT_URL_CANDIDATES = (
+    "https://apply.workable.com/api/v1/accounts/{slug}/jobs/count",
+    "https://apply.workable.com/api/v1/accounts/{slug}/jobs/count?country=Greece",
+    "https://apply.workable.com/api/v1/accounts/{slug}/jobs/count?country=GR",
+)
 
 _USER_AGENT = (
     "awesome-greek-tech-jobs/1.0 "
@@ -65,50 +65,63 @@ def _build_session() -> requests.Session:
     return session
 
 
-def fetch_count(session: requests.Session, slug: str, idx: int = 0, total: int = 0) -> int | None:
-    """Paginate POST /jobs, count entries where location.country == Greece."""
-    url = _JOBS_URL.format(slug=slug)
+def _fetch_count_from_count_endpoints(
+    session: requests.Session, slug: str, idx: int = 0, total: int = 0
+) -> int | None:
+    """Try /count variants first; skip geo-mismatched results and continue."""
     prefix = f"[{idx}/{total}] {slug}"
     headers = {
         "Origin": "https://apply.workable.com",
         "Referer": f"https://apply.workable.com/{slug}/",
     }
-    greece_count = 0
-    total_jobs = 0
-    token: str | None = None
 
-    try:
-        while True:
-            body: dict = {"query": ""}
-            if token:
-                body["token"] = token
+    for candidate in _COUNT_URL_CANDIDATES:
+        url = candidate.format(slug=slug)
+        try:
+            resp = session.get(url, headers=headers, timeout=TIMEOUT_SEC)
+        except requests.RequestException as e:
+            print(f"{prefix}: /count FAILED ({url}) → {e}", file=sys.stderr)
+            continue
 
-            resp = session.post(url, json=body, headers=headers, timeout=TIMEOUT_SEC)
-            if resp.status_code != 200:
-                print(
-                    f"{prefix}: HTTP {resp.status_code} {resp.reason or ''} → {resp.text[:200]}".strip(),
-                    file=sys.stderr,
-                )
-                return None
+        if resp.status_code != 200:
+            print(
+                f"{prefix}: /count HTTP {resp.status_code} ({url}) → {resp.text[:200]}".strip(),
+                file=sys.stderr,
+            )
+            continue
 
+        try:
             data = resp.json()
-            results = data.get("results", [])
-            for job in results:
-                total_jobs += 1
-                country = (job.get("location") or {}).get("country", "")
-                if country == TARGET_COUNTRY:
-                    greece_count += 1
+        except ValueError:
+            print(f"{prefix}: /count invalid JSON ({url})", file=sys.stderr)
+            continue
 
-            token = data.get("nextPage")
-            if not token or not results:
-                break
+        raw_total = data.get("total")
+        raw_incountry = data.get("incountry")
+        if not isinstance(raw_total, int) or not isinstance(raw_incountry, int):
+            print(f"{prefix}: /count missing keys ({url})", file=sys.stderr)
+            continue
 
-        print(f"{prefix}: {greece_count}/{total_jobs} jobs in {TARGET_COUNTRY}")
-        return greece_count
+        # If there are jobs but requester-geo "incountry" is 0, this endpoint is
+        # likely not reflecting Greece. Continue to the next /count candidate.
+        if raw_total > 0 and raw_incountry == 0:
+            print(f"{prefix}: /count geo mismatch ({url}) total={raw_total} incountry=0; trying next")
+            continue
 
-    except requests.RequestException as e:
-        print(f"{prefix}: FAILED → {e}", file=sys.stderr)
-        return None
+        print(f"{prefix}: /count hit ({url}) → {raw_incountry}/{raw_total}")
+        return raw_incountry
+
+    return None
+
+
+def fetch_count(session: requests.Session, slug: str, idx: int = 0, total: int = 0) -> int:
+    """Fetch count from /count endpoints only; return 0 on failure."""
+    prefix = f"[{idx}/{total}] {slug}"
+    count_value = _fetch_count_from_count_endpoints(session, slug, idx=idx, total=total)
+    if isinstance(count_value, int):
+        return count_value
+    print(f"{prefix}: all /count endpoints failed; using 0", file=sys.stderr)
+    return 0
 
 
 def main() -> int:
@@ -124,7 +137,7 @@ def main() -> int:
             slugs.append(slug)
 
     session = _build_session()
-    accounts: dict[str, int | None] = {}
+    accounts: dict[str, int] = {}
 
     print(f"Fetching {len(slugs)} Workable accounts…")
     for i, slug in enumerate(slugs, 1):
@@ -132,10 +145,10 @@ def main() -> int:
             time.sleep(DELAY_BETWEEN_SLUGS_SEC)
         accounts[slug] = fetch_count(session, slug, idx=i, total=len(slugs))
 
-    total_open = sum(n for n in accounts.values() if isinstance(n, int))
+    total_open = sum(accounts.values())
     out = {
         "generated_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-        "metric": "greece_by_job_location",
+        "metric": "incountry_greece",
         "accounts": accounts,
         "total_open": total_open,
     }
@@ -143,7 +156,7 @@ def main() -> int:
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     with OUTPUT_PATH.open("w", encoding="utf-8") as f:
         f.write(
-            "# Workable Greece job counts by location.country (generated by "
+            "# Workable Greece incountry counts from /count endpoints (generated by "
             "scripts/fetch_workable_counts)\n"
         )
         yaml.dump(
