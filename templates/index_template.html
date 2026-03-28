@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html class="light" lang="en">
+
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-R41TD0DEQB"></script>
     <script>
@@ -15,8 +16,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap"
         rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@300..700,0..1&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@300..700,0..1&display=swap"
         rel="stylesheet" />
     <script id="tailwind-config">
         tailwind.config = {
@@ -40,7 +40,9 @@
         }
     </script>
     <style>
-        .hidden-row { display: none !important; }
+        .hidden-row {
+            display: none !important;
+        }
 
         .policy-filter,
         .sector-filter,
@@ -123,6 +125,7 @@
         }
     </style>
 </head>
+
 <body class="bg-surface dark:bg-surface-dark text-slate-900 dark:text-slate-100 min-h-screen antialiased">
     <div class="absolute inset-0 pointer-events-none">
         <div class="mx-auto max-w-6xl">
@@ -137,22 +140,20 @@
             Remote/Location policies are currently under construction and may not reflect real-time changes.
         </div>
 
-        <nav class="sticky top-0 z-30 backdrop-blur bg-white/85 dark:bg-slate-950/80 border-b border-slate-200 dark:border-slate-800">
+        <nav
+            class="sticky top-0 z-30 backdrop-blur bg-white/85 dark:bg-slate-950/80 border-b border-slate-200 dark:border-slate-800">
             <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
                 <div class="flex items-center gap-2">
                     <span class="material-symbols-outlined text-lg text-cyan-600 dark:text-cyan-400">database</span>
                     <span class="font-semibold tracking-tight">Awesome Greek Tech Jobs</span>
                 </div>
                 <div class="flex items-center gap-1">
-                    <button
-                        onclick="document.documentElement.classList.toggle('dark')"
+                    <button onclick="document.documentElement.classList.toggle('dark')"
                         class="w-11 h-11 rounded-xl inline-flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800"
-                        title="Toggle dark mode"
-                        aria-label="Toggle dark mode">
+                        title="Toggle dark mode" aria-label="Toggle dark mode">
                         <span class="material-symbols-outlined">contrast</span>
                     </button>
-                    <a
-                        href="https://github.com/leftkats/awesome-greek-tech-jobs"
+                    <a href="https://github.com/leftkats/awesome-greek-tech-jobs"
                         class="w-11 h-11 rounded-xl inline-flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800"
                         title="Open GitHub repository">
                         <span class="material-symbols-outlined">code</span>
@@ -162,48 +163,54 @@
         </nav>
 
         <header class="max-w-6xl mx-auto px-4 pt-8 pb-6">
-            <div class="rounded-2xl border border-slate-200/80 dark:border-slate-800 bg-white/90 dark:bg-slate-900/70 shadow-soft dark:shadow-soft-dark p-6 sm:p-8">
+            <div
+                class="rounded-2xl border border-slate-200/80 dark:border-slate-800 bg-white/90 dark:bg-slate-900/70 shadow-soft dark:shadow-soft-dark p-6 sm:p-8">
                 <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Find tech companies hiring in Greece</h1>
                 <p class="mt-2 text-sm sm:text-base text-slate-600 dark:text-slate-300 max-w-3xl">
                     Curated company directory with search, filters, and Workable role snapshots.
                 </p>
 
                 <div class="mt-4 space-y-2" role="region" aria-label="Site statistics">
-                    <p class="text-xs sm:text-sm font-mono text-slate-600 dark:text-slate-300 leading-relaxed flex flex-wrap gap-x-2 gap-y-1 items-center">
+                    <p
+                        class="text-xs sm:text-sm font-mono text-slate-600 dark:text-slate-300 leading-relaxed flex flex-wrap gap-x-2 gap-y-1 items-center">
                         <span>Companies {{ stats.total_companies }}</span>
                         <span aria-hidden="true">·</span>
-                        <button type="button" class="stat-header-policy hover:text-slate-900 dark:hover:text-slate-100" data-policy="remote" aria-pressed="false" title="Show only remote companies">
+                        <button type="button" class="stat-header-policy hover:text-slate-900 dark:hover:text-slate-100"
+                            data-policy="remote" aria-pressed="false" title="Show only remote companies">
                             Remote {{ stats.policy_counts.get('remote', 0) }}
                         </button>
                         <span aria-hidden="true">·</span>
-                        <button type="button" class="stat-header-policy hover:text-slate-900 dark:hover:text-slate-100" data-policy="hybrid" aria-pressed="false" title="Show only hybrid companies">
+                        <button type="button" class="stat-header-policy hover:text-slate-900 dark:hover:text-slate-100"
+                            data-policy="hybrid" aria-pressed="false" title="Show only hybrid companies">
                             Hybrid {{ stats.policy_counts.get('hybrid', 0) }}
                         </button>
                         <span aria-hidden="true">·</span>
-                        <button type="button" class="stat-header-policy hover:text-slate-900 dark:hover:text-slate-100" data-policy="on-site" aria-pressed="false" title="Show only on-site companies">
+                        <button type="button" class="stat-header-policy hover:text-slate-900 dark:hover:text-slate-100"
+                            data-policy="on-site" aria-pressed="false" title="Show only on-site companies">
                             On-site {{ stats.policy_counts.get('on-site', 0) }}
                         </button>
                         <span aria-hidden="true">·</span>
-                        <button type="button" class="stat-header-policy hover:text-slate-900 dark:hover:text-slate-100" data-policy="n/a" aria-pressed="false" title="Show only N/A policy companies">
+                        <button type="button" class="stat-header-policy hover:text-slate-900 dark:hover:text-slate-100"
+                            data-policy="n/a" aria-pressed="false" title="Show only N/A policy companies">
                             N/A {{ stats.policy_counts.get('n/a', 0) }}
                         </button>
                         {% if stats.workable_companies_count %}
                         <span aria-hidden="true">·</span>
-                        <button
-                            type="button"
-                            id="statWorkableHiringBtn"
+                        <button type="button" id="statWorkableHiringBtn"
                             class="stat-workable-hiring inline-flex items-center gap-1 hover:text-slate-900 dark:hover:text-slate-100"
-                            aria-pressed="false"
-                            disabled
+                            aria-pressed="false" disabled
                             title="Show only companies with open Workable roles in Greece">
-                            <span id="workableLiveTotal" class="tabular-nums text-emerald-700 dark:text-emerald-400">...</span>
+                            <span id="workableLiveTotal"
+                                class="tabular-nums text-emerald-700 dark:text-emerald-400">...</span>
                             <span>open roles via Workable</span>
                         </button>
                         {% endif %}
                     </p>
                     {% if stats.workable_companies_count %}
-                    <p class="text-xs text-slate-500 dark:text-slate-400" id="workableLiveSummary" role="status" aria-live="polite">
-                        <span id="workableLiveExplainer">These numbers are fetched at build time, then embedded into this page.</span>
+                    <p class="text-xs text-slate-500 dark:text-slate-400" id="workableLiveSummary" role="status"
+                        aria-live="polite">
+                        <span id="workableLiveExplainer">These numbers are fetched at build time, then embedded into
+                            this page.</span>
                         <span id="workableLiveSubline"></span>
                     </p>
                     {% endif %}
@@ -213,12 +220,11 @@
 
         <section class="max-w-6xl mx-auto px-4 pb-4">
             <div class="relative">
-                <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-500">search</span>
-                <input
-                    id="searchInput"
+                <span
+                    class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-500">search</span>
+                <input id="searchInput"
                     class="w-full pl-11 pr-4 py-3.5 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-900/70 shadow-soft dark:shadow-soft-dark text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                    placeholder="Search by company, sector, location, or policy..."
-                    type="text">
+                    placeholder="Search by company, sector, location, or policy..." type="text">
             </div>
         </section>
 
@@ -226,32 +232,30 @@
             {% for company in companies %}
             <article
                 class="company-row rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-900/70 shadow-soft dark:shadow-soft-dark p-4 sm:p-5 flex flex-col gap-4"
-                data-name="{{ company.name }}"
-                data-policy="{{ company.work_policy }}"
-                data-sectors="{{ company.sectors|join(' ') }}"
-                data-sectors-list="{{ company.sectors|join('||') }}"
+                data-name="{{ company.name }}" data-policy="{{ company.work_policy }}"
+                data-sectors="{{ company.sectors|join(' ') }}" data-sectors-list="{{ company.sectors|join('||') }}"
                 data-locations="{{ company.locations|join(' ') }}"
                 data-locations-list="{{ company.locations|join('||') }}"
-                data-linkedin="{{ company.linkedin_company_id or '' }}"
-                {% if company.workable_slug %}data-workable-slug="{{ company.workable_slug }}"{% endif %}>
+                data-linkedin="{{ company.linkedin_company_id or '' }}" {% if company.workable_slug
+                %}data-workable-slug="{{ company.workable_slug }}" {% endif %}>
                 <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
                     <div class="min-w-0">
                         <div class="flex items-center flex-wrap gap-2">
-                            <a href="{{ company.site_url }}" target="_blank" rel="noopener noreferrer" class="company-link">
-                                <h2 class="text-xl sm:text-2xl font-bold tracking-tight break-words">{{ company.name }}</h2>
+                            <a href="{{ company.site_url }}" target="_blank" rel="noopener noreferrer"
+                                class="company-link">
+                                <h2 class="text-xl sm:text-2xl font-bold tracking-tight break-words">{{ company.name }}
+                                </h2>
                             </a>
-                            <span class="policy-badge-slot text-[11px] font-mono px-2 py-1 rounded-full {{ get_style(company.work_policy) }}">
+                            <span
+                                class="policy-badge-slot text-[11px] font-mono px-2 py-1 rounded-full {{ get_style(company.work_policy) }}">
                                 {{ company.work_policy }}
                             </span>
                         </div>
                         <div class="mt-3 flex flex-wrap gap-2">
                             {% for sector in company.sectors %}
-                            <button
-                                type="button"
+                            <button type="button"
                                 class="sector-filter text-[11px] sm:text-xs font-mono uppercase border border-slate-300 dark:border-slate-700 rounded-full px-2.5 py-1.5"
-                                data-sector="{{ sector }}"
-                                aria-pressed="false"
-                                title="Filter by {{ sector }}">
+                                data-sector="{{ sector }}" aria-pressed="false" title="Filter by {{ sector }}">
                                 {{ sector }}
                             </button>
                             {% endfor %}
@@ -264,12 +268,9 @@
                             </span>
                             <span class="inline-flex flex-wrap gap-1">
                                 {% for loc in company.locations %}
-                                <button
-                                    type="button"
+                                <button type="button"
                                     class="location-filter text-[11px] sm:text-xs font-mono uppercase border border-slate-300 dark:border-slate-700 rounded-full px-2.5 py-1.5"
-                                    data-location="{{ loc }}"
-                                    aria-pressed="false"
-                                    title="Filter by {{ loc }}">
+                                    data-location="{{ loc }}" aria-pressed="false" title="Filter by {{ loc }}">
                                     {{ loc }}
                                 </button>
                                 {% endfor %}
@@ -280,27 +281,26 @@
 
                     <div class="flex flex-wrap items-center gap-2 sm:justify-end">
                         {% if company.workable_slug %}
-                        <span class="workable-job-badge border border-slate-300 dark:border-slate-700 rounded-xl px-3 py-2 min-w-[8.25rem] text-center" role="status" aria-live="polite">
-                            <span class="workable-job-badge-text text-[11px] sm:text-xs font-mono uppercase opacity-60">...</span>
+                        <span
+                            class="workable-job-badge border border-slate-300 dark:border-slate-700 rounded-xl px-3 py-2 min-w-[8.25rem] text-center"
+                            role="status" aria-live="polite">
+                            <span
+                                class="workable-job-badge-text text-[11px] sm:text-xs font-mono uppercase opacity-60">...</span>
                         </span>
                         {% endif %}
-                        <a
-                            class="company-career-link border border-slate-300 dark:border-slate-700 rounded-xl px-3 py-2.5 inline-flex items-center gap-2 hover:bg-slate-100 dark:hover:bg-slate-800"
-                            href="{{ company.career_url }}"
-                            target="_blank"
-                            rel="noopener noreferrer">
+                        <a class="company-career-link border border-slate-300 dark:border-slate-700 rounded-xl px-3 py-2.5 inline-flex items-center gap-2 hover:bg-slate-100 dark:hover:bg-slate-800"
+                            href="{{ company.career_url }}" target="_blank" rel="noopener noreferrer">
                             <span class="material-symbols-outlined text-base">arrow_outward</span>
                             <span class="career-btn-label text-[11px] sm:text-xs font-mono uppercase">Careers</span>
                         </a>
                         {% if company.linkedin_company_id %}
-                        <a
-                            class="border border-slate-300 dark:border-slate-700 rounded-xl px-3 py-2.5 inline-flex items-center hover:bg-slate-100 dark:hover:bg-slate-800"
-                            href="https://www.linkedin.com/company/{{ company.linkedin_company_id }}/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            title="Open LinkedIn">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
-                                <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.86-3.04-1.86 0-2.15 1.45-2.15 2.95v5.66H9.33V9h3.41v1.56h.05c.48-.9 1.64-1.86 3.37-1.86 3.6 0 4.27 2.37 4.27 5.45v6.3zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45z" />
+                        <a class="border border-slate-300 dark:border-slate-700 rounded-xl px-3 py-2.5 inline-flex items-center hover:bg-slate-100 dark:hover:bg-slate-800"
+                            href="https://www.linkedin.com/company/{{ company.linkedin_company_id }}/" target="_blank"
+                            rel="noopener noreferrer" title="Open LinkedIn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
+                                focusable="false">
+                                <path
+                                    d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.86-3.04-1.86 0-2.15 1.45-2.15 2.95v5.66H9.33V9h3.41v1.56h.05c.48-.9 1.64-1.86 3.37-1.86 3.6 0 4.27 2.37 4.27 5.45v6.3zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45z" />
                             </svg>
                         </a>
                         {% endif %}
@@ -311,36 +311,38 @@
         </main>
 
         <footer class="max-w-6xl mx-auto px-4 pb-10 space-y-4">
-            <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-900/70 shadow-soft dark:shadow-soft-dark p-5 sm:p-6 flex flex-col gap-5">
+            <div
+                class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-900/70 shadow-soft dark:shadow-soft-dark p-5 sm:p-6 flex flex-col gap-5">
                 <div class="flex items-center justify-center gap-2" id="paginationControls">
-                    <button onclick="changePage(-1)" id="prevBtn" class="rounded-xl border border-slate-300 dark:border-slate-700 px-4 py-2 text-xs font-mono uppercase hover:bg-slate-100 dark:hover:bg-slate-800 disabled:opacity-40">
+                    <button onclick="changePage(-1)" id="prevBtn"
+                        class="rounded-xl border border-slate-300 dark:border-slate-700 px-4 py-2 text-xs font-mono uppercase hover:bg-slate-100 dark:hover:bg-slate-800 disabled:opacity-40">
                         Prev
                     </button>
-                    <div id="pageIndicator" class="rounded-xl bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 px-4 py-2 text-xs font-mono uppercase">
+                    <div id="pageIndicator"
+                        class="rounded-xl bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 px-4 py-2 text-xs font-mono uppercase">
                         01
                     </div>
-                    <button onclick="changePage(1)" id="nextBtn" class="rounded-xl border border-slate-300 dark:border-slate-700 px-4 py-2 text-xs font-mono uppercase hover:bg-slate-100 dark:hover:bg-slate-800 disabled:opacity-40">
+                    <button onclick="changePage(1)" id="nextBtn"
+                        class="rounded-xl border border-slate-300 dark:border-slate-700 px-4 py-2 text-xs font-mono uppercase hover:bg-slate-100 dark:hover:bg-slate-800 disabled:opacity-40">
                         Next
                     </button>
                 </div>
                 <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <a
-                        class="rounded-xl border border-slate-300 dark:border-slate-700 px-4 py-2.5 text-xs font-mono uppercase inline-flex items-center gap-2 hover:bg-slate-100 dark:hover:bg-slate-800"
+                    <a class="rounded-xl border border-slate-300 dark:border-slate-700 px-4 py-2.5 text-xs font-mono uppercase inline-flex items-center gap-2 hover:bg-slate-100 dark:hover:bg-slate-800"
                         href="https://github.com/leftkats/awesome-greek-tech-jobs">
                         <span class="material-symbols-outlined text-sm">code</span>
                         View on GitHub
                     </a>
-                    <a
-                        class="rounded-xl border border-slate-300 dark:border-slate-700 px-4 py-2.5 text-xs font-mono uppercase inline-flex items-center gap-2 hover:bg-slate-100 dark:hover:bg-slate-800"
-                        href="https://github.com/leftkats/awesome-greek-tech-jobs/blob/main/CONTRIBUTING.MD"
-                        target="_blank"
-                        rel="noopener noreferrer">
+                    <a class="rounded-xl border border-slate-300 dark:border-slate-700 px-4 py-2.5 text-xs font-mono uppercase inline-flex items-center gap-2 hover:bg-slate-100 dark:hover:bg-slate-800"
+                        href="https://github.com/leftkats/awesome-greek-tech-jobs/blob/main/contributing.md"
+                        target="_blank" rel="noopener noreferrer">
                         <span class="material-symbols-outlined text-sm">add</span>
                         Contribute
                     </a>
                 </div>
             </div>
-            <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-900/70 shadow-soft dark:shadow-soft-dark p-5 sm:p-6">
+            <div
+                class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-900/70 shadow-soft dark:shadow-soft-dark p-5 sm:p-6">
                 <h3 class="text-sm font-semibold tracking-tight">Disclaimer</h3>
                 <p class="mt-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                     This project is for community and educational purposes only. Data is aggregated from public sources
@@ -809,8 +811,10 @@
         updatePagination();
     </script>
 </body>
+
 </html>
-{# <!DOCTYPE html>
+{#
+<!DOCTYPE html>
 <html class="light" lang="en">
 
 <head>
@@ -1081,35 +1085,40 @@
 
     <header class="px-4 pt-8 pb-6 border-b brutalist-border border-x-0 border-t-0">
         <h1 class="text-4xl font-extrabold tracking-tighter uppercase mb-4">Awesome Greek<br>Tech Jobs</h1>
-        <p class="text-xs sm:text-xs font-bold mono-text max-w-sm">[A curated list of companies that hire for tech jobs in Greece]
+        <p class="text-xs sm:text-xs font-bold mono-text max-w-sm">[A curated list of companies that hire for tech jobs
+            in Greece]
         </p>
         <div class="mt-3 space-y-2 max-w-2xl" role="region" aria-label="Site statistics">
             <p
                 class="text-xs sm:text-[10px] mono-text uppercase font-bold text-neutral-600 dark:text-neutral-400 leading-relaxed flex flex-wrap gap-x-1.5 gap-y-1 items-baseline">
-                <span>Companies {{ stats.total_companies }}</span><span class="text-neutral-400 dark:text-neutral-600 select-none"
-                    aria-hidden="true">·</span>
-                <button type="button" class="stat-header-policy text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100"
+                <span>Companies {{ stats.total_companies }}</span><span
+                    class="text-neutral-400 dark:text-neutral-600 select-none" aria-hidden="true">·</span>
+                <button type="button"
+                    class="stat-header-policy text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100"
                     data-policy="remote" aria-pressed="false" title="Show only remote companies">Remote {{
-                    stats.policy_counts.get('remote', 0) }}</button><span class="text-neutral-400 dark:text-neutral-600 select-none"
-                    aria-hidden="true">·</span>
-                <button type="button" class="stat-header-policy text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100"
+                    stats.policy_counts.get('remote', 0) }}</button><span
+                    class="text-neutral-400 dark:text-neutral-600 select-none" aria-hidden="true">·</span>
+                <button type="button"
+                    class="stat-header-policy text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100"
                     data-policy="hybrid" aria-pressed="false" title="Show only hybrid companies">Hybrid {{
-                    stats.policy_counts.get('hybrid', 0) }}</button><span class="text-neutral-400 dark:text-neutral-600 select-none"
-                    aria-hidden="true">·</span>
-                <button type="button" class="stat-header-policy text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100"
+                    stats.policy_counts.get('hybrid', 0) }}</button><span
+                    class="text-neutral-400 dark:text-neutral-600 select-none" aria-hidden="true">·</span>
+                <button type="button"
+                    class="stat-header-policy text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100"
                     data-policy="on-site" aria-pressed="false" title="Show only on-site companies">On-site {{
-                    stats.policy_counts.get('on-site', 0) }}</button><span class="text-neutral-400 dark:text-neutral-600 select-none"
-                    aria-hidden="true">·</span>
-                <button type="button" class="stat-header-policy text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100"
+                    stats.policy_counts.get('on-site', 0) }}</button><span
+                    class="text-neutral-400 dark:text-neutral-600 select-none" aria-hidden="true">·</span>
+                <button type="button"
+                    class="stat-header-policy text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100"
                     data-policy="n/a" aria-pressed="false" title="Show only N/A policy companies">N/A {{
                     stats.policy_counts.get('n/a', 0) }}</button>
                 {% if stats.workable_companies_count %}<span class="text-neutral-400 dark:text-neutral-600 select-none"
                     aria-hidden="true">·</span>
                 <button type="button" id="statWorkableHiringBtn"
                     class="stat-workable-hiring whitespace-nowrap text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100"
-                    aria-pressed="false" disabled
-                    title="Show only companies with open Workable roles in Greece"><span id="workableLiveTotal"
-                        class="tabular-nums text-emerald-700 dark:text-emerald-400">…</span> open roles via Workable</button>
+                    aria-pressed="false" disabled title="Show only companies with open Workable roles in Greece"><span
+                        id="workableLiveTotal" class="tabular-nums text-emerald-700 dark:text-emerald-400">…</span> open
+                    roles via Workable</button>
                 {% endif %}
             </p>
             {% if stats.workable_companies_count %}
@@ -1117,8 +1126,8 @@
                 id="workableLiveSummary" role="status" aria-live="polite">
                 <span id="workableLiveExplainer">These numbers use Workable’s public job-count API when the site is
                     generated (CI), then are embedded in this HTML — your browser does not call Workable. Counts can be
-                    inaccurate (timing, geography filters, API behavior).</span><span
-                    id="workableLiveSubline" class="text-neutral-500 dark:text-neutral-400"></span>
+                    inaccurate (timing, geography filters, API behavior).</span><span id="workableLiveSubline"
+                    class="text-neutral-500 dark:text-neutral-400"></span>
             </p>
             {% endif %}
         </div>
@@ -1138,16 +1147,15 @@
         {% for company in companies %}
         <div class="company-row flex flex-col sm:flex-row p-4 gap-3 sm:gap-4 brutalist-border border-t-0 border-l-0 border-r-0 bg-white dark:bg-background-dark"
             data-name="{{ company.name }}" data-policy="{{ company.work_policy }}"
-            data-sectors="{{ company.sectors|join(' ') }}"
-            data-sectors-list="{{ company.sectors|join('||') }}"
-            data-locations="{{ company.locations|join(' ') }}"
-            data-locations-list="{{ company.locations|join('||') }}"
-            data-linkedin="{{ company.linkedin_company_id or '' }}"
-            {% if company.workable_slug %}data-workable-slug="{{ company.workable_slug }}"{% endif %}>
+            data-sectors="{{ company.sectors|join(' ') }}" data-sectors-list="{{ company.sectors|join('||') }}"
+            data-locations="{{ company.locations|join(' ') }}" data-locations-list="{{ company.locations|join('||') }}"
+            data-linkedin="{{ company.linkedin_company_id or '' }}" {% if company.workable_slug
+            %}data-workable-slug="{{ company.workable_slug }}" {% endif %}>
             <div class="flex-1 min-w-0 space-y-2">
                 <div class="flex flex-wrap items-center gap-2">
                     <a href="{{ company.site_url }}" target="_blank" rel="noopener noreferrer" class="company-link">
-                        <h2 class="text-lg sm:text-xl font-extrabold uppercase leading-none break-words">{{ company.name }}</h2>
+                        <h2 class="text-lg sm:text-xl font-extrabold uppercase leading-none break-words">{{ company.name
+                            }}</h2>
                     </a>
                     <span
                         class="text-[10px] sm:text-[10px] brutalist-border px-1 font-bold uppercase shrink-0 {{ get_style(company.work_policy) }}">
@@ -1165,7 +1173,8 @@
                         {% endfor %}
                     </div>
                     {% if company.locations %}
-                    <span class="hidden sm:block self-stretch w-px min-h-[1rem] bg-gray-300 dark:bg-gray-600 shrink-0 opacity-80"
+                    <span
+                        class="hidden sm:block self-stretch w-px min-h-[1rem] bg-gray-300 dark:bg-gray-600 shrink-0 opacity-80"
                         aria-hidden="true"></span>
                     <div class="location-group-box inline-flex items-baseline gap-1.5 max-w-full border border-gray-300 dark:border-gray-700 px-2 py-1.5"
                         role="group" aria-label="Office locations">
@@ -1173,7 +1182,8 @@
                             focusable="false">
                             <use href="#loc-pin" />
                         </svg>
-                        <span class="inline-flex flex-wrap items-baseline gap-x-1.5 gap-y-0.5 text-xs sm:text-[10px] mono-text uppercase leading-snug">
+                        <span
+                            class="inline-flex flex-wrap items-baseline gap-x-1.5 gap-y-0.5 text-xs sm:text-[10px] mono-text uppercase leading-snug">
                             {% for loc in company.locations %}
                             {% if not loop.first %}<span class="text-gray-400 dark:text-gray-500 select-none"
                                 aria-hidden="true">·</span>{% endif %}
@@ -1191,21 +1201,24 @@
             <div class="flex items-center sm:justify-end">
                 <div class="flex flex-wrap items-center gap-2">
                     {% if company.workable_slug %}
-                    <span class="workable-job-badge brutalist-border px-2 py-2 min-w-0 sm:min-w-[7rem] flex items-center justify-center text-center"
+                    <span
+                        class="workable-job-badge brutalist-border px-2 py-2 min-w-0 sm:min-w-[7rem] flex items-center justify-center text-center"
                         role="status" aria-live="polite">
-                        <span class="workable-job-badge-text text-xs sm:text-[9px] font-bold mono-text uppercase opacity-50">…</span>
+                        <span
+                            class="workable-job-badge-text text-xs sm:text-[9px] font-bold mono-text uppercase opacity-50">…</span>
                     </span>
                     {% endif %}
                     <a class="company-career-link brutalist-border px-3 py-3 flex items-center justify-center gap-2 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors"
                         href="{{ company.career_url }}" target="_blank" rel="noopener noreferrer">
                         <span class="material-symbols-outlined">arrow_outward</span>
-                        <span class="career-btn-label text-xs sm:text-[10px] font-bold mono-text uppercase">Career</span>
+                        <span
+                            class="career-btn-label text-xs sm:text-[10px] font-bold mono-text uppercase">Career</span>
                     </a>
 
                     {% if company.linkedin_company_id %}
                     <a class="brutalist-border px-3 py-3 flex items-center justify-center hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors"
-                        href="https://www.linkedin.com/company/{{ company.linkedin_company_id }}/" target="_blank" rel="noopener noreferrer"
-                        title="Open LinkedIn">
+                        href="https://www.linkedin.com/company/{{ company.linkedin_company_id }}/" target="_blank"
+                        rel="noopener noreferrer" title="Open LinkedIn">
                         <span class="material-symbols-outlined">business</span>
                     </a>
                     {% endif %}
@@ -1233,9 +1246,11 @@
                 VIEW ON GITHUB
             </a>
             <div class="text-center">
-                <p class="text-[10px] sm:text-[9px] font-bold mono-text opacity-40 uppercase tracking-tighter">Deployed via GitHub
+                <p class="text-[10px] sm:text-[9px] font-bold mono-text opacity-40 uppercase tracking-tighter">Deployed
+                    via GitHub
                     Pages</p>
-                <p class="text-[10px] sm:text-[9px] font-bold mono-text opacity-40 uppercase tracking-tighter">Maintained by the
+                <p class="text-[10px] sm:text-[9px] font-bold mono-text opacity-40 uppercase tracking-tighter">
+                    Maintained by the
                     Community</p>
             </div>
         </div>
@@ -1243,7 +1258,7 @@
 
     <div class="h-20 sm:h-0" aria-hidden="true"></div>
     <div class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[100]">
-        <a href="https://github.com/leftkats/awesome-greek-tech-jobs/blob/main/CONTRIBUTING.MD" target="_blank"
+        <a href="https://github.com/leftkats/awesome-greek-tech-jobs/blob/main/contributing.md" target="_blank"
             class="bg-black text-white dark:bg-white dark:text-black w-14 h-14 brutalist-border flex items-center justify-center active:translate-x-0.5 active:translate-y-0.5 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]">
             <span class="material-symbols-outlined text-2xl">add</span>
         </a>
