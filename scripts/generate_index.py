@@ -49,10 +49,26 @@ def get_policy_style(policy):
         return "hidden"
     p = str(policy).lower()
     if "remote" in p:
-        return "bg-green-100 text-green-800"
+        return " ".join(
+            [
+                "bg-emerald-50 text-emerald-700 ring-1 ring-inset ring-emerald-200",
+                "dark:bg-emerald-500/10 dark:text-emerald-300",
+                "dark:ring-emerald-400/30",
+            ]
+        )
     if "hybrid" in p:
-        return "bg-yellow-100 text-yellow-800"
-    return "bg-gray-100 text-gray-800"
+        return " ".join(
+            [
+                "bg-amber-50 text-amber-700 ring-1 ring-inset ring-amber-200",
+                "dark:bg-amber-500/10 dark:text-amber-300 dark:ring-amber-400/30",
+            ]
+        )
+    return " ".join(
+        [
+            "bg-slate-100 text-slate-700 ring-1 ring-inset ring-slate-200",
+            "dark:bg-slate-500/10 dark:text-slate-300 dark:ring-slate-400/30",
+        ]
+    )
 
 
 def normalize_url(value):
@@ -235,7 +251,7 @@ def run_generate_index() -> None:
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         f.write(final_html)
 
-    print("Website updated with specified Nav, Header, and Search UI components.")
+    print("Website updated with modernized UI template and refreshed styles.")
 
 
 def main(argv: list[str] | None = None) -> int:
