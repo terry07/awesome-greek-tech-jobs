@@ -3,7 +3,7 @@
 > The open-source map of tech hiring in Greece
 
 
-![Companies](https://img.shields.io/badge/Companies-248-blue?style=for-the-badge) ![Hub](https://img.shields.io/badge/Hub-Athens-red?style=for-the-badge) ![Remote](https://img.shields.io/badge/Remote-50-green?style=for-the-badge) ![Hybrid](https://img.shields.io/badge/Hybrid-120-yellow?style=for-the-badge)
+![Companies](https://img.shields.io/badge/Companies-248-blue?style=for-the-badge) ![Hub](https://img.shields.io/badge/Hub-Athens-red?style=for-the-badge) ![Remote](https://img.shields.io/badge/Remote-50-green?style=for-the-badge) ![Hybrid](https://img.shields.io/badge/Hybrid-120-yellow?style=for-the-badge) ![Open Roles](https://img.shields.io/badge/Open%20Roles-206-orange?style=for-the-badge)
 
 [**Explore the Live Directory**](https://leftkats.github.io/awesome-greek-tech-jobs/)
 
@@ -42,7 +42,7 @@ The full table lives in **[engineering-hubs.md](engineering-hubs.md)** — sorta
 - **Remote vs. Hybrid:** Many Athens-based companies are moving to 1-2 days in office.
 - **Salary Insight:** Remote roles for international companies (via B2B) usually pay higher than local Greek contracts.  Weigh the trade-offs when the latter includes private health coverage.
 - **Interview Prep:** Focus on System Design for Senior roles and LeetCode (Medium) for mid-level.
-- **Job Counts:** Workable counts are fetched daily via CI from the public API and may be inaccurate due to timing, geography filters, or API behavior.
+- **Job Counts (Experimental):** Workable counts are fetched weekly via CI from the public API and may be inaccurate due to timing, geography filters, or API behavior.
 
 ---
 
@@ -57,7 +57,7 @@ Built with ❤️ by the community. PRs welcome!
 
 ## Disclaimer
 
-This project is for **community and educational purposes only**. All data is aggregated from publicly available sources (company websites, LinkedIn, Workable's public API).  Job counts shown are **cached snapshots** generated once daily and **do not represent a real-time official database**.
+This project is for **community and educational purposes only**. All data is aggregated from publicly available sources (company websites, LinkedIn, Workable's public API).  Job counts shown are **cached snapshots** generated weekly and **do not represent a real-time official database**.
 
 **Please note:**
 * **Non-Affiliation:** This project is independent and is not affiliated
