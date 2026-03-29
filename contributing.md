@@ -36,6 +36,23 @@ https://www.linkedin.com/company/**company-id**/.
 5. **Create Pull Request**: Go back to the original repository and click "New Pull Request".
 6. **Automated Review & Merge**: If your Pull Request passes the validation checks and follows the required format, our automated workflow will merge via a squash commit.
 
+## How to Resolve an Issue
+
+If you want to work on an open issue, follow this simple flow:
+
+1. **Pick an issue**: Start with `good first issue` or `easy` labels if you are new.
+2. **Comment on the issue**: Leave a short message like "I can work on this" to avoid duplicate work.
+3. **Create a branch**: Use a clear branch name, for example `fix/workable-count-summary` or `docs/uv-quickstart`.
+4. **Implement and test locally**:
+   - `uv sync --frozen`
+   - `uv run python -m scripts.generate_readme`
+   - `uv run python -m scripts.generate_index`
+   - (if needed) `uv run python -m scripts.fetch_workable_counts`
+5. **Open a PR linked to the issue**:
+   - Include `Closes #<issue-number>` (or `Fixes #<issue-number>`) in the PR description so GitHub closes the issue automatically after merge.
+   - Add a short summary of what changed and how you tested it.
+6. **Address review feedback**: Push follow-up commits to the same branch until approved.
+
 ## Contribution Rules
 
 * **Tech Focus Only**: Please only add companies, roles, or resources relevant to Computer/Software Engineering, Data, or Tech-Business roles. No mechanical, civil, or non-tech engineering.
