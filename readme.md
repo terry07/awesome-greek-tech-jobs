@@ -3,7 +3,7 @@
 > The open-source map of tech hiring in Greece
 
 
-![Companies](https://img.shields.io/badge/Companies-248-blue?style=for-the-badge) ![Hub](https://img.shields.io/badge/Hub-Athens-red?style=for-the-badge) ![Remote](https://img.shields.io/badge/Remote-50-green?style=for-the-badge) ![Hybrid](https://img.shields.io/badge/Hybrid-120-yellow?style=for-the-badge) ![Open Roles](https://img.shields.io/badge/Open%20Roles-206-orange?style=for-the-badge)
+![Companies](https://img.shields.io/badge/Companies-248-blue?style=for-the-badge) ![Hub](https://img.shields.io/badge/Hub-Athens-red?style=for-the-badge) ![Remote](https://img.shields.io/badge/Remote-50-green?style=for-the-badge) ![Hybrid](https://img.shields.io/badge/Hybrid-120-yellow?style=for-the-badge) ![Open Roles](https://img.shields.io/badge/Open%20Roles-1232-orange?style=for-the-badge)
 
 [**Explore the Live Directory**](https://leftkats.github.io/awesome-greek-tech-jobs/)
 
