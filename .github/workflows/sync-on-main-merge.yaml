@@ -24,9 +24,12 @@ concurrency:
 
 jobs:
   deploy:
-    if: >
-      github.repository == 'leftkats/awesome-greek-it-jobs' &&
-      (github.event_name != 'push' ||
+    # workflow_dispatch / schedule: do not use head_commit (often unset → job was skipped).
+    # push: skip bot follow-up commits with [skip ci].
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      github.event_name == 'schedule' ||
+      (github.event_name == 'push' &&
        !contains(github.event.head_commit.message, '[skip ci]'))
     runs-on: ubuntu-latest
     steps:
