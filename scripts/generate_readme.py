@@ -204,12 +204,43 @@ def generate() -> None:
     )
     lines.append("")
 
-    if queries_data and "queries" in queries_data:
-        lines.append("---\n")
-        lines.append("## Useful Search Queries\n")
-        for q in queries_data["queries"]:
-            lines.append(f"- [{q['name']}]({q['url']})")
-        lines.append("")
+    def _append_query_bullets(query_items: list) -> None:
+        for q in query_items:
+            name = (q.get("name") or "").strip()
+            url = (q.get("url") or "").strip()
+            desc = (q.get("description") or "").strip()
+            if not name or not url:
+                continue
+            if desc:
+                lines.append(f"- [{name}]({url}) — {desc}")
+            else:
+                lines.append(f"- [{name}]({url})")
+
+    if queries_data:
+        sections = queries_data.get("sections")
+        legacy_queries = queries_data.get("queries")
+        if sections or legacy_queries:
+            lines.append("---\n")
+            lines.append("## Useful Search Queries & Resources\n")
+            lines.append(
+                "Hand-picked links for Greek (and broader remote) job hunting. "
+                "Each entry includes a short note on what you’ll find there.\n"
+            )
+            if sections:
+                for sec in sections:
+                    if not isinstance(sec, dict):
+                        continue
+                    title = (sec.get("title") or "").strip()
+                    items = sec.get("queries") or []
+                    if not items:
+                        continue
+                    if title:
+                        lines.append(f"### {title}\n")
+                    _append_query_bullets(items)
+                    lines.append("")
+            elif legacy_queries:
+                _append_query_bullets(legacy_queries)
+                lines.append("")
 
     footer = readme_data.get("footer", {})
     notes = footer.get("notes", [])
